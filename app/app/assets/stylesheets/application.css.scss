@@ -1,0 +1,558 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@import "bootstrap";
+
+@charset "UTF-8";
+/* CSS Document */
+
+html, body {
+  height:100%
+}
+
+/*Headers*/
+header {
+  background-image: image-url('simple_dashed.png');
+  background-position: center;
+  background-repeat: repeat;
+  height: 100%;
+  min-height: 800px;
+  background-attachment: fixed;
+}
+
+h1.header {
+  text-align:center;
+}
+
+span.header {
+  font-size:56px;
+  color:#fff;
+  text-shadow: 0px 0px 10px rgba(0,0,0,1);
+}
+
+header span.help-block {
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.9);
+  display: inline;
+  margin-right: 20px;
+}
+
+header span.disclaimer {
+  color: #CCC;
+  font-weight: 600;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.9);
+  display:inline;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+
+
+#hero {
+  z-index: 4;
+  }
+
+#hero-wrap {
+  position: absolute;
+  height: 100%;
+  display: table;
+  width:100%;
+}
+
+.hero-off {
+  opacity: 0;
+  left: -25px;
+  transition: all 1s ease;
+}
+
+#sign-up-wrap {
+  position: absolute;
+  height: 100%;
+  display: table;
+  left: 100px;
+  opacity: 0;
+  z-index:3;
+  width:100%;
+}
+.sign-up-on {
+  opacity: 100;
+  left: 0px;
+  transition: all 1s ease;
+}
+
+#sign-up {
+  display:table-cell;
+  vertical-align:middle;
+  width: 100%;
+
+}
+
+/*Main Structural Elements*/
+#form {
+  
+  margin: 0px auto;
+  text-align:center;
+}
+
+.form-label-container {
+  position: relative;
+  top:-15px;
+}
+
+.form-label {
+  font-size: 13px;
+  color:#fff;
+  position: absolute;
+  top:-8px;
+  text-transform:uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  
+}
+
+.content {
+  width: 960px;
+  margin: 0px auto;
+}
+
+.content-inner {
+  padding: 100px 0px;
+  
+}
+
+.center-parent {
+  display: table;
+  height:100%;
+  position:relative;
+}
+
+.center-verticalmid {
+  display: table-cell;
+  vertical-align:middle;
+  position: relative;
+}
+
+.dark {
+  background-color:#333;
+  color:#fff;
+}
+
+article#stats {
+  margin: 100px 0px;
+}
+
+img.stats {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  display: block;
+}
+
+section#question {
+  margin-top: 80px;
+}
+
+
+/*Nav */
+nav {
+  width: 960px;
+  margin: 0px auto;
+  position: absolute;
+  bottom: 20px;
+  z-index: 100;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color:#fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+  
+}
+
+
+/*Typography*/
+
+p.center {
+  text-align:center;
+}
+
+.center {
+  text-align:center;
+}
+
+h1.mainheader {
+  
+  margin: 10px 0px;
+  text-align:center;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 125%;
+  color:#fff;
+  text-shadow: 0px 0px 10px rgba(0,0,0,1);
+  
+}
+
+p.description {
+  text-align:center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+  color:#fff;
+  text-shadow: 0px 0px 10px rgba(0,0,0,1);
+}
+
+a.btn-clear {
+  background-color:rgba(0,0,0,1);
+  padding: 10px 15px;
+  border-radius:25px;
+  font-weight:700;
+  font-size: 16px;
+  border-width:2px;
+  border-style: solid;
+  border-color: rgba(255,255,255,0.2);
+  color:#09F;
+  transition: all 0.5s ease;
+  opacity: 0.7;
+}
+
+a.btn-clear:hover {
+  background-color:rgba(0,0,0,0.9);
+  color:#09F;
+  text-decoration: none;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+a.btn-round {
+  border-radius: 25px;
+}
+
+.btn {
+  font-weight: 700;
+}
+
+.header-image {
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+  font-size: 60px;
+  font-weight: 700;
+  border-radius: 20px;
+  border-style: solid;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+  color: #999;
+}
+
+.center-wrapper {
+  display: table;
+  margin: 20px auto;
+}
+
+/*Images*/
+
+img.logo{
+  width:150px;
+  display:block;
+  opacity:0.75;
+  position:absolute;
+  left: 50%;
+  margin-left: -75px;
+  top:150px;
+}
+
+img.header {
+  display: block;
+  margin: 20px auto;
+  width: 86px;
+  height:86px;
+}
+
+img.feature {
+  margin-top: 30px;
+}
+
+p.caption {
+  font-weight: 400;
+  color:#999;
+  font-size: 16px;
+  text-align:center;
+}
+/*heading styles*/
+
+h6.subhead {
+  font-size: 14px;
+  color:#666;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2.heading {
+  width: 75%;
+  line-height: 110%;
+  display: block;
+  margin: 0px auto;
+}
+
+/*Parallax*/
+
+.parallax-container{
+  background-color: #333;
+  z-index:1;
+  height:900px;
+  position:relative;
+  min-width:960px;
+}
+
+.parallax {
+  margin: 100px auto;
+  position:relative;
+  width:960px;
+  height:600px;
+  top:200px;
+  
+}
+
+.parallax-title{
+  color:#fff;
+  text-shadow: 0px 0px 15px rgba(0,0,0,0.6);
+  position:absolute;
+  text-align:center;
+  width:100%;
+  top:100px;
+  min-width:960px;
+  z-index:50;
+}
+
+.parallax-title h6 {
+  color: #CCC;
+}
+
+.parallax-title h2 {
+  width:720px;
+}
+
+.parallax-heading {
+  top: 100px;
+  width: 960px;
+  margin: 0px auto;
+}
+
+a.thing {
+  position: absolute;
+  display:table;
+  width:120px;
+  height:120px;
+  padding:20px;
+  border-radius: 100px;
+  color:#fff;
+  text-align:center;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  vertical-align:middle;
+  z-index:2;
+  box-shadow:0px 0px 35px rgba(0,0,0,0.25);
+}
+
+a.thing:hover {
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.thing-internal {
+  display:table-cell;
+  vertical-align:middle;
+}
+
+.parallax a.thing:first-child {
+  position:absolute;
+  top:100px;
+  left:0px!important;
+  background-color:#06F;
+}
+
+.parallax a.thing:nth-child(2) {
+  position:absolute;
+  top: 200px;
+  left: 200px !important;
+  background-color:#C33;
+}
+
+.parallax a.thing:nth-child(3) {
+  position:absolute;
+  top: 100px;
+  left: 400px !important;
+  background-color:#6C0;
+}
+
+.parallax a.thing:nth-child(4) {
+  position:absolute;
+  top:200px;
+  left:600px!important;
+  background-color:#936;
+}
+
+.parallax a.thing:nth-child(5) {
+  position:absolute;
+  top:100px;
+  left:800px!important;
+  background-color:#FC0;
+}
+
+.parallax a.thing:nth-child(6) {
+  position:absolute;
+  top: 300px;
+  left:0px!important;
+}
+
+.parallax a.thing:nth-child(7) {
+  position:absolute;
+  top: 400px;
+  left: 200px!important;
+}
+
+.parallax a.thing:nth-child(8) {
+  position:absolute;
+  top: 300px;
+  left: 400px!important;
+  background-color:#C6C;
+}
+
+.parallax a.thing:nth-child(9) {
+  position:absolute;
+  top: 400px;
+  left: 600px!important;
+}
+
+.parallax a.thing:nth-child(10) {
+  position:absolute;
+  top: 300px;
+  left: 800px!important;
+}
+
+/* Custom Modals */
+
+.modal {
+  width: 300px;
+  height: 300px;
+  padding:100px;
+    left: 50%;
+  border-radius: 300px;
+}
+
+.modal-inner {
+  display: table-cell;
+  vertical-align:middle;
+}
+
+.modal-inner-container {
+  display:table;
+  height:300px;
+  width:300px;
+}
+
+.modal-inner p {
+  color:#fff;
+  font-weight:600;
+  font-size:16px;
+  text-align:center;
+  line-height:120%;
+}
+
+.modal-inner span.speaker {
+  color:#fff;
+  font-weight:700;
+  font-size:14px;
+  text-align:center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+.modal-inner span.attrib {
+  color:#fff;
+  font-weight:500;
+  font-size:12px;
+  text-align:center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.modal-inner a{
+  text-align:center;
+  border-radius: 15px;
+  padding:5px 10px;
+  background-color:rgba(255,255,255,0.5);
+  transition: all 0.5s ease;
+}
+
+.modal-inner a:hover{
+  background-color:rgba(255,255,255,0.9);
+  transition: all 0.5s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.modal-inner p.exit {
+  margin-top: 20px;
+}
+
+#social-skills-modal{
+  background-color:#06F;
+}
+
+#stats-modal {
+  background-color:#C6C;
+}
+
+/* Buttons and Forms */
+
+form.signup {
+  border-radius:10px;
+  border-style: solid;
+  border-color: rgba(255,255,255,0.2);
+  border-width: 2px;
+  margin-top: 20px;
+  padding-top:55px;
+  padding-bottom: 35px;
+  background-color:rgba(255,255,255,0.05);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+
+}
+
+input.round {
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  padding: 10px 20px;
+  height: 24px;
+  font-size: 17.5px;
+  margin-right: 10px;
+}
+
+#sign-up-button {
+  margin-right:10px;
+}
+
+select, input {
+  margin-right: 5px;
+}
+
+input.twohundred {
+  width:200px;
+}
