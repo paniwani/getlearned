@@ -2,13 +2,20 @@
 <html>
 <head>
   <title>Getlearned</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
+  <!-- Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/dym8sdl.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <!-- End Typekit -->
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <div class="content center-parent">
+      <%= render "layouts/messages" %>
 
-<%= yield %>
-
+      <%= yield %>
+    </div>
 </body>
 </html>

@@ -2,26 +2,28 @@
   <div class="content-inner center-verticalmid" id=hero>
 
       <article style=margin-bottom:50px;>
-
         <h1 class="mainheader">Let's fix medical education together.</h1>
         <p class=description>We are creating a global classroom to empower the next generation of health experts and medical providers. Sign up to get notified when it's ready.</p>
       </article>
+
     <div id=form>
       
-
       <%= form_for @user, html: { class: 'form-inline signup' } do |f| %>
 
-      <div class="form-label-container">
-        <div style="left:49px; text-align:left;" class=form-label>I am a</div> 
-        <div style="left:275px; text-align:left;" class=form-label>I want to learn</div>
-        <div style="left:500px; text-align:left;" class=form-label>100% Spam Free</div>
-      </div>
+        <%= f.error_messages %>
+
+        <div class="form-label-container">
+          <div style="left:49px; text-align:left;" class=form-label>I am a</div> 
+          <div style="left:275px; text-align:left;" class=form-label>I want to learn</div>
+          <div style="left:500px; text-align:left;" class=form-label>100% Spam Free</div>
+        </div>
 
         <%= f.select :role, options_for_select(User.roles) %>
         <%= f.select :learn, options_for_select(User.learn) %>
         <%= f.email_field :email, placeholder: "Email Address", class: "input-medium twohundred" %>
         <%= f.text_field :zipcode, placeholder: "Zip Code", class: "input-small" %>
         <%= f.submit "Submit", class: "btn btn-primary btn-round" %>
+
       <% end %>
       
       <br><br>
