@@ -14,8 +14,16 @@
 @import "bootstrap";
 
 @charset "UTF-8";
-/* CSS Document */
 
-input {
-  width: 100%;
+.signup {
+
+  .control-group, .btn {
+    margin: 0 0 0 10px;
+    float: left;
+  }
+
+  .user_zipcode, .btn {
+    margin-top: 25px;
+  }
+  
 }

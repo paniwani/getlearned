@@ -8,28 +8,27 @@
 
     <div id=form>
       
-      <%= form_for @user, html: { class: 'form-inline signup' } do |f| %>
+      <div class="row">
+        <div class="span12">
 
-        <%= f.error_messages %>
+        <%= simple_form_for @user, html: { class: 'signup' } do |f| %>
+          <%= f.error_messages :header_message => "", :message => "You'll need to fix the following fields:" %>
 
-        <div class="form-label-container">
-          <div style="left:49px; text-align:left;" class=form-label>I am a</div> 
-          <div style="left:275px; text-align:left;" class=form-label>I want to learn</div>
-          <div style="left:500px; text-align:left;" class=form-label>100% Spam Free</div>
+          <%= f.input :role, collection: User.roles, selected: User.roles.first, label: "I am a" %>
+          <%= f.input :learn, collection: User.learn, selected: User.learn.first, label: "I want to learn" %>
+          <%= f.input :email, placeholder: "Email Address", input_html: { class: "input-medium twohundred" }, label: "100% Spam Free" %>
+          <%= f.input :zipcode, required: true, input_html: { class: "input-small", pattern: '(\d{5}([\-]\d{4})?)' }, label: false %>
+
+          <%= f.submit "Submit", class: "btn btn-primary btn-round" %>
+        <% end %>
+
         </div>
 
-        <%= f.select :role, options_for_select(User.roles) %>
-        <%= f.select :learn, options_for_select(User.learn) %>
-        <%= f.email_field :email, placeholder: "Email Address", class: "input-medium twohundred" %>
-        <%= f.text_field :zipcode, placeholder: "Zip Code", class: "input-small" %>
-        <%= f.submit "Submit", class: "btn btn-primary btn-round" %>
-
-      <% end %>
+        <div class="span12">
+          <div class="disclaimer">Don't worry, we're 100% against spam.</div>
+        </div>
+      </div>
       
-      <br><br>
-      <span class="disclaimer">Don't worry, we're 100% against spam.</span> <br/>
-      
-     </div>
     <nav id=main>Blog • Team • Contact</nav>
   </div> 
 </div>

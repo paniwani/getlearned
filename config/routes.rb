@@ -1,4 +1,4 @@
 Getlearned::Application.routes.draw do
-  resource :users
+  resources :users
   root to: "users#new"
 end
