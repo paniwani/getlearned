@@ -15,3 +15,7 @@ gem 'launchy'
 gem 'pry'
 gem 'simple_form'
 gem 'dynamic_form'
+
+group :production do
+  gem 'pg', '0.12.2'
+end
