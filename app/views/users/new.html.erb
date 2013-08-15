@@ -8,28 +8,26 @@
 
     <div id=form>
       
-      <div class="row">
-        <div class="span12">
+
 
         <%= simple_form_for @user, html: { class: 'signup' } do |f| %>
+        
           <%= f.error_messages :header_message => "", :message => "You'll need to fix the following fields:" %>
 
           <%= f.input :role, collection: User.roles, selected: User.roles.first, label: "I am a" %>
           <%= f.input :learn, collection: User.learn, selected: User.learn.first, label: "I want to learn" %>
           <%= f.input :email, placeholder: "Email Address", input_html: { class: "input-medium twohundred" }, label: "100% Spam Free" %>
-          <%= f.input :zipcode, required: true, input_html: { class: "input-small", pattern: '(\d{5}([\-]\d{4})?)' }, label: false %>
+          <%= f.input :zipcode, placeholder:"Zip Code", required: true, input_html: { class: "input-small", pattern: '(\d{5}([\-]\d{4})?)' }, label: false %>
 
           <%= f.submit "Submit", class: "btn btn-primary btn-round" %>
+        
         <% end %>
 
-        </div>
+     
 
-        <div class="span12">
           <div class="disclaimer">Don't worry, we're 100% against spam.</div>
-        </div>
-      </div>
+
       
-    <nav id=main>Blog • Team • Contact</nav>
-  </div> 
+    </div> 
 </div>
 
